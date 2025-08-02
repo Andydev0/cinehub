@@ -1,0 +1,123 @@
+# ===========================================
+# GITIGNORE PARA PROJETO CINEHUB
+# ===========================================
+
+# Arquivos de ambiente (contêm informações sensíveis)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Banco de dados SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===========================================
+# BACKEND (GO)
+# ===========================================
+
+# Binários compilados
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+main
+api
+filmes-backend
+
+# Arquivos de teste
+*.test
+*.out
+coverage.txt
+coverage.html
+
+# Dependências do Go
+vendor/
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===========================================
+# FRONTEND (NODE.JS/REACT)
+# ===========================================
+
+# Dependências
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build de produção
+dist/
+build/
+.next/
+out/
+
+# Cache
+.cache/
+.parcel-cache/
+.npm
+.eslintcache
+.stylelintcache
+
+# Arquivos temporários
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+
+# ===========================================
+# SISTEMA OPERACIONAL
+# ===========================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ===========================================
+# OUTROS
+# ===========================================
+
+# Arquivos de backup
+*.bak
+*.backup
+*.tmp
+*.temp
+
+# Certificados SSL
+*.pem
+*.key
+*.crt
+*.csr
+
+# Arquivos de configuração local
+config.local.*
+settings.local.*
