@@ -193,6 +193,9 @@ O projeto utiliza um design moderno com:
 - **Ícones emoji** para melhor identificação visual
 - **Estados de loading** e feedback visual
 
+
+---
+
 <div align="center">
   <p>⭐ Se este projeto te ajudou, considere dar uma estrela!</p>
   <p>💡 Desenvolvido com 💜 para aprimorar habilidades em Go e React</p>
