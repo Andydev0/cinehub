@@ -1,6 +1,6 @@
 module github.com/Andydev0/filmes-backend
 
-go 1.24.5
+go 1.24.4
 
 require (
 	github.com/gin-gonic/gin v1.10.1
