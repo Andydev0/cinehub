@@ -24,7 +24,7 @@ function App() {
             <Route path="/buscar" element={<ResultadosBuscaPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/registrar" element={<RegistroPage />} />
-            <Route path="/gerador-aleatorio" element={<GeradorAleatorioPage />} />
+            <Route path="/aleatorio" element={<GeradorAleatorioPage />} />
             <Route path="/filme/:id" element={<PaginaDetalhesFilme />} />
 
             {/* Rotas protegidas */}

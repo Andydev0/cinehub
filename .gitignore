@@ -31,9 +31,6 @@ yarn-error.log*
 *.dll
 *.so
 *.dylib
-main
-api
-filmes-backend
 
 # Arquivos de teste
 *.test
