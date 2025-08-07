@@ -1,9 +1,16 @@
 import axios from 'axios';
 
+// Define a URL base da API
+// Usa a variável de ambiente se disponível, caso contrário usa localhost
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/v1';
+
 // Cria a instância base do Axios.
 const api = axios.create({
-  baseURL: 'http://localhost:8080/v1',
+  baseURL: API_URL,
 });
+
+// Log para debug - remova em produção
+console.log('API URL:', API_URL);
 
 // Adiciona um interceptor que roda antes de cada requisição.
 api.interceptors.request.use(

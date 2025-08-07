@@ -4,6 +4,10 @@
 package api
 
 import (
+	"log"
+	"os"
+	"strings"
+
 	"github.com/Andydev0/filmes-backend/internal/api/handler"
 	"github.com/Andydev0/filmes-backend/internal/api/middleware"
 	"github.com/Andydev0/filmes-backend/internal/repositorio"
@@ -59,7 +63,20 @@ func SetupRouter(chaveAPI string, db *sqlx.DB, jwtSecret string) *gin.Engine {
 	
 	// Configuração do middleware CORS
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"http://localhost:5173"} // Origem do frontend
+	
+	// Verifica se existe uma variável de ambiente com as origens permitidas
+	allowedOrigins := os.Getenv("ALLOWED_ORIGINS")
+	if allowedOrigins != "" {
+		// Divide a string por vírgulas para obter múltiplas origens
+		origins := strings.Split(allowedOrigins, ",")
+		config.AllowOrigins = origins
+		log.Printf("CORS configurado para permitir origens: %v", origins)
+	} else {
+		// Usa o localhost como padrão
+		config.AllowOrigins = []string{"http://localhost:5173"} // Origem do frontend padrão
+		log.Println("CORS configurado para permitir apenas localhost:5173")
+	}
+	
 	config.AllowMethods = []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"}
 	config.AllowHeaders = []string{"Origin", "Content-Type", "Authorization"}
 	router.Use(cors.New(config))
